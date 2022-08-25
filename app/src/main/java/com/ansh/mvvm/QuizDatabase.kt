@@ -7,18 +7,18 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [Quote::class],version = 1)
 
-abstract class QuoteDatabase : RoomDatabase() {
+abstract class QuizDatabase : RoomDatabase() {
 
-    abstract fun quoteDao() : QuoteDao
+    abstract fun quizDao() : QuizDao
 
     companion object{
-        private var INSTANCE : QuoteDatabase? =null
-        fun getDatabase(context: Context) : QuoteDatabase{
+        private var INSTANCE : QuizDatabase? =null
+        fun getDatabase(context: Context) : QuizDatabase{
             if(INSTANCE == null){
 
                 synchronized(this){
-                    INSTANCE = Room.databaseBuilder(context,QuoteDatabase::class.java,"quote_database")
-                        .createFromAsset("quotes.db").build()
+                    INSTANCE = Room.databaseBuilder(context,QuizDatabase::class.java,"quiz_database")
+                        .build()
                 }
 
             }

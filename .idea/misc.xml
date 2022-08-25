@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/himan/Desktop/android studio temp/ChessLive_v3.3_apkpure.com_source_from_JADX/MVVM/app/src/main/res/layout/activity_main.xml" value="0.2625" />
+        <entry key="..\:/Users/himan/Desktop/android studio temp/ChessLive_v3.3_apkpure.com_source_from_JADX/MVVM/app/src/main/res/drawable/background.xml" value="0.1625" />
+        <entry key="..\:/Users/himan/Desktop/android studio temp/ChessLive_v3.3_apkpure.com_source_from_JADX/MVVM/app/src/main/res/layout/activity_main.xml" value="0.14646904969485613" />
+        <entry key="..\:/Users/himan/Desktop/android studio temp/ChessLive_v3.3_apkpure.com_source_from_JADX/MVVM/app/src/main/res/layout/dialog.xml" value="0.21462163317657118" />
+        <entry key="..\:/Users/himan/Desktop/android studio temp/ChessLive_v3.3_apkpure.com_source_from_JADX/MVVM/app/src/main/res/layout/itemlayout.xml" value="0.21274799493457155" />
       </map>
     </option>
   </component>

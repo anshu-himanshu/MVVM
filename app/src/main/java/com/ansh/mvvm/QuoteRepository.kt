@@ -2,13 +2,14 @@ package com.ansh.mvvm
 
 import androidx.lifecycle.LiveData
 
-class QuoteRepository(private val quoteDao: QuoteDao) {
+class QuoteRepository(private val quizDao: QuizDao) {
 
-    fun getQuotes(): LiveData<List<Quote>>{
-        return quoteDao.getQuotes()
+    fun getQuiz(): LiveData<List<Quote>>{
+        return quizDao.getQuiz()
     }
 
-    suspend fun insertQuote(quote: Quote){
-        quoteDao.insertQuote(quote)
+    suspend fun insertQuiz(quote: Quote){
+        quizDao.insertQuiz(quote)
     }
+
 }

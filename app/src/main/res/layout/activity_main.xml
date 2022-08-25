@@ -1,42 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="quotes"
             type="String" />
 
     </data>
 
-    <ScrollView
 
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-        
-        <LinearLayout
+
+        <Button
+
+            android:id="@+id/btnSubmit"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="Submit" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginBottom="3dp"
+            android:id="@+id/rvQuestions"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
 
-            <Button
+            android:layout_above="@id/btnNext"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            android:scrollbarFadeDuration="5000"
+            android:scrollbarSize="2dp"
+            android:scrollbarStyle="insideInset"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/itemlayout" />
 
-                android:id="@+id/btnAddQuote"
-                android:layout_width="match_parent"
-                android:layout_margin="32dp"
-                android:text="Insert Quote"
-                android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btnSubmit"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="Next" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="32dp"
-                android:text="@{quotes + quotes}"/>
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btnSubmit"
+            android:layout_marginStart="10dp"
+            android:text="Previous" />
+
+    </RelativeLayout>
 
 
-        </LinearLayout>
-
-
-    </ScrollView>
 </layout>
